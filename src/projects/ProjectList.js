@@ -14,7 +14,7 @@ function ProjectList({ projects }) {
                 <strong>{project.name}</strong>
               </h5>
               <p>{project.description}</p>
-              <p>Budget : {project.budget.toLocaleString()}</p>
+              <p>Budget : {project.budget.toLocaleString()}</p> Test2
             </section>
           </div>
         </div>
