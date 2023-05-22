@@ -2,15 +2,21 @@ import { Project } from './Project';
 import React from 'react';
 import PropTypes from 'prop-types';
 
+ProjectCard.propTypes = {
+  project: PropTypes.instanceOf(Project).isRequired,
+  onEdit: PropTypes.func.isRequired,
+};
+
 function formatDescription(description) {
   return description.substring(0, 60) + '...';
 }
 
 function ProjectCard(props) {
-  const { project } = props;
+  const { project, onEdit } = props;
 
   const handleEditClick = (projectBeingEdited) => {
-    console.log(projectBeingEdited);
+    onEdit(projectBeingEdited);
+    // console.log(projectBeingEdited);
   };
   return (
     <div className="card">
@@ -29,9 +35,5 @@ function ProjectCard(props) {
     </div>
   );
 }
-
-ProjectCard.propTypes = {
-  project: PropTypes.instanceOf(Project).isRequired,
-};
 
 export default ProjectCard;
