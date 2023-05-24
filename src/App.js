@@ -31,7 +31,8 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/:id" element={<ProjectPage />} />
         </Routes>
-      </div>
+      </div>{' '}
+      Test Git Rebase
     </Router>
   );
 }
